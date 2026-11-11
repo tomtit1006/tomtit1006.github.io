@@ -39,7 +39,8 @@ window.SITE = {
 
   videos: [
     // Các mục bên dưới là video MẪU (chưa có link). Sẽ được thay bằng video thật.
-    { title: "Video nổi bật của bạn sẽ nằm ở đây", description: "Video bạn tự hào nhất, đặt ở đầu trang để người xem thấy ngay.", category: "Tài liệu", date: "2026-11-01", duration: "8:42", featured: true },
+    { url: "media/tide-keeper.mp4", thumb: "media/tide-keeper.jpg", title: "The Tide Keeper", description: "Phim hoạt hình ngắn phong cách vẽ tay: lúc bình minh, một người khổng lồ cổ xưa phủ đầy san hô thức giấc dưới đáy biển và trồi lên qua làn nước vào buổi sáng vàng rực.", category: "Hoạt hình", date: "2026-11-11", duration: "1:20", featured: true },
+    { title: "Video mẫu số 1", description: "Mô tả ngắn một dòng về nội dung video.", category: "Tài liệu", date: "2026-11-01", duration: "8:42" },
     { title: "Video mẫu số 2", description: "Mô tả ngắn một dòng về nội dung video.", category: "Tài liệu", date: "2026-10-20", duration: "12:05" },
     { title: "Video mẫu số 3", description: "Mô tả ngắn một dòng về nội dung video.", category: "Giải thích", date: "2026-10-08", duration: "6:30" },
     { title: "Video mẫu số 4", description: "Mô tả ngắn một dòng về nội dung video.", category: "Giải thích", date: "2026-09-21", duration: "9:14" },
