@@ -149,6 +149,41 @@
   var featured = videos.filter(function (v) { return v.featured; })[0] || videos[0];
   if (featured) $("featured").appendChild(card(featured));
 
+  // Video nền của phần mở đầu
+  var bg = profile.background || {};
+  var bgVideo = null;
+  if (bg.video || bg.poster) {
+    var still = !bg.video || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (still && bg.poster) {
+      var pic = el("img");
+      pic.src = bg.poster;
+      pic.alt = "";
+      $("hero-bg").appendChild(pic);
+    } else if (!still) {
+      bgVideo = el("video");
+      bgVideo.muted = true;
+      bgVideo.loop = true;
+      bgVideo.autoplay = true;
+      bgVideo.playsInline = true;
+      bgVideo.setAttribute("muted", "");
+      bgVideo.setAttribute("playsinline", "");
+      bgVideo.preload = "auto";
+      if (bg.poster) bgVideo.poster = bg.poster;
+      bgVideo.src = bg.video;
+      $("hero-bg").appendChild(bgVideo);
+      dialog.addEventListener("close", function () { bgVideo.play().catch(function () {}); });
+    }
+    $("hero").classList.add("has-bg");
+    if (featured) {
+      $("watch").hidden = false;
+      $("browse").hidden = true;
+      $("watch").addEventListener("click", function () {
+        if (bgVideo) bgVideo.pause();
+        open(featured);
+      });
+    }
+  }
+
   // Lưới và bộ lọc
   var categories = [];
   videos.forEach(function (v) { if (v.category && categories.indexOf(v.category) < 0) categories.push(v.category); });

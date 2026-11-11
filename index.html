@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
   <a class="skip" href="#videos">Bỏ qua, tới danh sách video</a>
@@ -25,18 +25,22 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-text">
-        <p class="eyebrow" data-bind="role"></p>
-        <h1 data-bind="name"></h1>
-        <p class="tagline" data-bind="tagline"></p>
-        <div class="cta">
-          <a class="btn primary" href="#videos">Xem video</a>
-          <a class="btn" href="#contact">Liên hệ</a>
+    <section class="hero-wrap" id="hero">
+      <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+      <div class="hero">
+        <div class="hero-text">
+          <p class="eyebrow" data-bind="role"></p>
+          <h1 data-bind="name"></h1>
+          <p class="tagline" data-bind="tagline"></p>
+          <div class="cta">
+            <button class="btn primary" id="watch" type="button" hidden>▶ Xem có tiếng</button>
+            <a class="btn primary" id="browse" href="#videos">Xem video</a>
+            <a class="btn" href="#contact">Liên hệ</a>
+          </div>
+          <dl class="stats" id="stats"></dl>
         </div>
-        <dl class="stats" id="stats"></dl>
+        <div class="hero-media" id="featured"></div>
       </div>
-      <div class="hero-media" id="featured"></div>
     </section>
 
     <section id="videos" class="section">
@@ -82,7 +86,7 @@
     </div>
   </dialog>
 
-  <script src="content.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="content.js?v=3"></script>
+  <script src="assets/app.js?v=3"></script>
 </body>
 </html>

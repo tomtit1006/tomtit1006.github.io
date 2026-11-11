@@ -23,6 +23,8 @@ window.SITE = {
       "Đây là đoạn giới thiệu mẫu. Hãy cho tôi biết bạn là ai, bạn làm loại video gì và cho ai xem, tôi sẽ viết lại phần này.",
       "Đoạn thứ hai có thể nói về cách bạn làm việc, công cụ bạn dùng, hoặc những dự án bạn muốn nhận.",
     ],
+    // Video nền của phần mở đầu trang (bản nhẹ, không tiếng). Xóa dòng này để tắt.
+    background: { video: "media/tide-keeper-bg.mp4", poster: "media/tide-keeper.jpg" },
     avatar: "", // ví dụ "media/avatar.jpg"
     location: "Việt Nam",
     email: "", // để trống thì nút email không hiện
