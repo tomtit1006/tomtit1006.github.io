@@ -16,7 +16,7 @@
 */
 window.SITE = {
   profile: {
-    name: "Tên của bạn",
+    name: "Snack làm video",
     role: "Nhà sáng tạo video",
     tagline: "Tôi kể những câu chuyện khó bằng hình ảnh dễ hiểu.",
     bio: [
