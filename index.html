@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio video">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0d'/%3E%3Cpath d='M12 9.5v13l11-6.5z' fill='%23ff5a36'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#videos">Bỏ qua, tới danh sách video</a>
+
+  <header class="nav">
+    <a class="brand" href="#top"><span class="rec" aria-hidden="true"></span><span data-bind="name"></span></a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#videos">Video</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow" data-bind="role"></p>
+        <h1 data-bind="name"></h1>
+        <p class="tagline" data-bind="tagline"></p>
+        <div class="cta">
+          <a class="btn primary" href="#videos">Xem video</a>
+          <a class="btn" href="#contact">Liên hệ</a>
+        </div>
+        <dl class="stats" id="stats"></dl>
+      </div>
+      <div class="hero-media" id="featured"></div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="section-head">
+        <h2>Video</h2>
+        <div class="filters" id="filters" role="group" aria-label="Lọc theo nhóm"></div>
+      </div>
+      <div class="grid wide" id="grid-wide"></div>
+      <h3 class="sub" id="vertical-title">Video dọc</h3>
+      <div class="grid tall" id="grid-tall"></div>
+      <p class="empty" id="empty" hidden>Chưa có video nào trong nhóm này.</p>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="avatar" id="avatar" aria-hidden="true"></div>
+      <div>
+        <h2>Giới thiệu</h2>
+        <div id="bio"></div>
+        <p class="meta" id="location"></p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Cùng làm một video?</h2>
+      <p>Hợp tác, đặt hàng hoặc chỉ muốn chào một câu, cứ nhắn cho tôi.</p>
+      <div class="links" id="links"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year"></span> <span data-bind="name"></span></span>
+    <a href="#top">Lên đầu trang ↑</a>
+  </footer>
+
+  <dialog class="player" id="player" aria-labelledby="player-title">
+    <div class="player-inner">
+      <div class="player-bar">
+        <h2 id="player-title"></h2>
+        <button class="close" id="player-close" aria-label="Đóng">✕</button>
+      </div>
+      <div class="frame" id="player-frame"></div>
+      <p class="player-desc" id="player-desc"></p>
+    </div>
+  </dialog>
+
+  <script src="content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
